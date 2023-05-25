@@ -54,5 +54,16 @@ deploy-demo:
 		echo "You're on the docs-demo branch. Deploying docs-demo site ..."; \
         quarto render && \
         aws s3 sync ./_site s3://docs-ci-cd-demo/site/ --delete && \
-        aws cloudfront create-invalidation --distribution-id E38AINJY5CYN6P --paths "/*" --no-cli-pager > /dev/null
+        aws cloudfront create-invalidation --distribution-id E38AINJY5CYN6P --paths "/*" --no-cli-pager > /dev/null; \
     fi
+
+# Deployment to https://docs.validmind.ai/
+deploy-prod:
+	@if [ "`git rev-parse --abbrev-ref HEAD`" != "main" ] && [ "`git rev-parse --abbrev-ref HEAD`" != "prod" ]; then \
+		echo "You're not on the main or prod branches, no action taken."; \
+	else \
+		echo "You're on the main or prod branch. Deploying prod site ..."; \
+		quarto render && \
+		aws s3 sync ./_site s3://docs-ci-cd-prod/site/ --delete && \
+		aws cloudfront create-invalidation --distribution-id E2I9R40IH01NW3 --paths "/*" --no-cli-pager > /dev/null; \
+	fi

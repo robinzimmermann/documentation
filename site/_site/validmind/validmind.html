@@ -27,6 +27,9 @@
             <h3>High Level API</h3>
                 <ul class="memberlist">
             <li>
+                    <a class="variable" href="#__version__">__version__</a>
+            </li>
+            <li>
                     <a class="function" href="#init">init</a>
             </li>
             <li>
@@ -61,6 +64,7 @@
 
             <h3>Submodules</h3>
             <ul>
+                    <li><a href="validmind/__version__.html">__version__</a></li>
                     <li><a href="validmind/datasets.html">datasets</a></li>
                     <li><a href="validmind/data_validation.html">data_validation</a></li>
                     <li><a href="validmind/model_validation.html">model_validation</a></li>
@@ -125,11 +129,23 @@ and to upload to the ValidMind Platform.</p>
                 
                 
             </section>
+                <section id="__version__">
+                    <div class="attr variable">
+            <span class="name">__version__</span>        =
+<span class="default_value">&#39;1.13.10&#39;</span>
+
+        
+    </div>
+    <a class="headerlink" href="#__version__"></a>
+    
+    
+
+                </section>
                 <section id="init">
                     <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">init</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">project</span><span class="o">=</span><span class="kc">None</span>, </span><span class="param"><span class="n">api_key</span><span class="o">=</span><span class="kc">None</span>, </span><span class="param"><span class="n">api_secret</span><span class="o">=</span><span class="kc">None</span>, </span><span class="param"><span class="n">api_host</span><span class="o">=</span><span class="kc">None</span></span><span class="return-annotation">):</span></span>
+        <span class="name">init</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">project</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">api_secret</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>,</span><span class="param">	<span class="n">api_host</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></span><span class="return-annotation">):</span></span>
 
         
     </div>
@@ -155,12 +171,6 @@ retrieve them from the environment variables <code>VM_API_KEY</code> and <code>V
 <ul>
 <li><strong>ValueError:</strong>  If the API key and secret are not provided</li>
 </ul>
-
-<h6 id="returns">Returns:</h6>
-
-<blockquote>
-  <p>bool: True if the ping was successful</p>
-</blockquote>
 </div>
 
 
@@ -464,7 +474,7 @@ See the documentation for the specific test plan, metric or threshold test for m
                     <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">log_test_results</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">results</span>, </span><span class="param"><span class="n">dataset_type</span><span class="o">=</span><span class="s1">&#39;training&#39;</span></span><span class="return-annotation">):</span></span>
+        <span class="name">log_test_results</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">results</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span>,</span><span class="param">	<span class="n">dataset_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;training&#39;</span></span><span class="return-annotation">) -> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]]</span>:</span></span>
 
         
     </div>

@@ -38,7 +38,8 @@ website:
     - title: "Home"
       style: docked
       collapse: true
-      collapse-level: 2
+      collapse-level: 3
+      collapse-below: sm
 
       contents:
         - index.qmd
@@ -56,6 +57,7 @@ website:
         - file: guide/tutorials.qmd
           contents:
           - guide/try-developer-framework-with-docker.qmd
+          - guide/try-developer-framework-with-colab.qmd
         - text: "---"
         - file: guide/overview.qmd
           contents:
@@ -63,9 +65,9 @@ website:
 #          - guide/cloud-platforms.qmd
           - guide/editions-and-features.qmd
           - guide/license-agreement.qmd
-#          - guide/release-notes.qmd
-#          - guide/release-access.qmd
-#        - text: "---"
+          - text: "Releases"
+            contents:
+            - guide/release-notes-2023-may-30.qmd
 #        - file: guide/mrm.qmd
 #          contents:
 #          - guide/mrm-three-lines-of-defense.qmd
@@ -134,8 +136,7 @@ website:
           contents:
           - notebooks/Quickstart_Customer Churn_full_suite.ipynb
           - notebooks/Introduction_Customer_Churn.ipynb
-          - notebooks/time_series_data_validation_full_suite.ipynb
-          - notebooks/time_series_model_validation_full_suite.ipynb
+          - notebooks/time_series/tutorial_time_series_forecasting.ipynb
         - text: "---"
         - test: "Reference"
           file: guide/reference.qmd

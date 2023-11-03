@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.3.450">
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>ValidMind - Exploring Tests in the Developer Framework:</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
+    <title>ValidMind - Exploring Tests in the Developer Framework:</title>    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+      /* CSS for syntax highlighting */
+      pre > code.sourceCode { white-space: pre; position: relative; }
+      pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+      pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode > span { color: inherit; text-decoration: inherit; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      pre > code.sourceCode { white-space: pre-wrap; }
+      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+      }
+      pre.numberSource code
+        { counter-reset: source-line 0; }
+      pre.numberSource code > span
+        { position: relative; left: -4em; counter-increment: source-line; }
+      pre.numberSource code > span > a:first-child::before
+        { content: counter(source-line);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+        }
+      pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+      div.sourceCode
+        {   }
+      @media screen {
+      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+      }
+    </style>
+    <style>
+      .quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
+      .quarto-embed-header h6 {
+        font-size: 1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 300;
+      }
+      .quarto-embed-header a.quarto-download-embed {
+        font-size: 0.7em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+    </style>
+    
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -77,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+     <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -96,8 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S46CKWPNSS"></script>
+}</script>  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S46CKWPNSS"></script>
 
 <script type="text/javascript">
 
@@ -105,19 +125,18 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+</script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
-
-
-<link rel="stylesheet" href="../../styles.css">
-</head>
-
-<body class="nav-sidebar docked nav-fixed fullcontent">
-
-
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>  
+        <link rel="stylesheet" href="../../styles.css">
+      </head>
+  <body class="nav-sidebar docked nav-fixed quarto-notebook fullcontent">
+    <div class="quarto-embed-header">
+      <h6><i class="bi bi-journal-code"></i> explore_tests.ipynb</h6>
+      <a href="../../notebooks/how_to/explore_tests.ipynb" class="btn btn-primary quarto-download-embed" download="explore_tests.ipynb">Download Notebook</a>
+    </div>
+     
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
@@ -1446,9 +1465,7 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
+<main class="content page-columns page-full" id="quarto-document-content">      <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Exploring Tests in the Developer Framework:</h1>
 </div>
@@ -1463,20 +1480,18 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
   </div>
   
 
-</header>
-
-<section id="a-comprehensive-guide-to-finding-and-viewing-tests" class="level2">
+</header>   <section id="a-comprehensive-guide-to-finding-and-viewing-tests" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="a-comprehensive-guide-to-finding-and-viewing-tests">A Comprehensive Guide to Finding and Viewing Tests</h2>
 <p>Welcome to this comprehensive guide to the ValidMind Developer Framework <code>tests</code> module! In this notebook, we’ll dive deep into the utilities available for viewing and understanding the various tests that ValidMind provides. Whether you’re just getting started or looking for advanced tips, you’ll find clear examples and explanations to assist you every step of the way.</p>
 <p>Before we delve into the details, let’s import the <code>describe_test</code> and <code>list_tests</code> functions from the <code>validmind.tests</code> module. These are the two functions that can be used to easily filter through tests and view details for individual tests.</p>
-<div class="cell" data-execution_count="1">
+<div class="cell-container column-page-left"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> validmind.tests <span class="im">import</span> describe_test, list_tests</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+</div></div>
 </section>
-<section id="listing-all-tests" class="level2">
+<section id="listing-all-tests" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="listing-all-tests">Listing All Tests</h2>
 <p>The <code>list_tests</code> function provides a convenient way to retrieve all available tests in the <code>validmind.tests</code> module. When invoked without any parameters, it returns a pandas DataFrame containing detailed information about each test.</p>
-<div class="cell" data-execution_count="2">
+<div class="cell-container column-page-left"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>list_tests()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <style type="text/css">
@@ -2239,7 +2254,7 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 </tbody>
 </table>
 </div>
-</div>
+</div></div>
 </section>
 <section id="understanding-tags-and-task-types" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-tags-and-task-types">Understanding Tags and Task Types</h2>
@@ -2262,11 +2277,11 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 </ul></li>
 </ul>
 </section>
-<section id="searching-for-specific-tests-using-tags-and-task_types" class="level2">
+<section id="searching-for-specific-tests-using-tags-and-task_types" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="searching-for-specific-tests-using-tags-and-task_types">Searching for Specific Tests using <code>tags</code> and <code>task_types</code></h2>
 <p>While listing all tests is valuable, there are times when you need to narrow down your search. The <code>list_tests</code> function offers <code>filter</code>, <code>task</code>, and <code>tags</code> parameters to assist in this.</p>
 <p>If you’re targeting a specific test or tests that match a particular task type, the <code>filter</code> parameter comes in handy. For example, to list tests that are compatible with ‘sklearn’ models:</p>
-<div class="cell" data-execution_count="3">
+<div class="cell-container column-page-left"><div class="cell-decorator"><pre>In [3]:</pre></div><div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>list_tests(<span class="bu">filter</span><span class="op">=</span><span class="st">"sklearn"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <style type="text/css">
@@ -2393,9 +2408,9 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 </tbody>
 </table>
 </div>
-</div>
+</div></div>
 <p>The <code>task</code> parameter is designed for pinpointing tests that align with a specific task type. For instance, to find tests tailored for ‘classification’ tasks:</p>
-<div class="cell" data-execution_count="4">
+<div class="cell-container column-page-left"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>list_tests(task<span class="op">=</span><span class="st">"classification"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <style type="text/css">
@@ -2828,9 +2843,9 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 </tbody>
 </table>
 </div>
-</div>
+</div></div>
 <p>The <code>tags</code> parameter facilitates searching tests by their tags. For instance, if you’re interested in only tests associated designed for <code>model_performance</code> that produce a plot (denoted by the <code>visualization</code> tag)</p>
-<div class="cell" data-execution_count="5">
+<div class="cell-container column-page-left"><div class="cell-decorator"><pre>In [5]:</pre></div><div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>list_tests(tags<span class="op">=</span>[<span class="st">"model_performance"</span>, <span class="st">"visualization"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <style type="text/css">
@@ -2891,12 +2906,11 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 </tbody>
 </table>
 </div>
-</div>
+</div></div>
 <p>The above parameters can be combined to create complex queries. For instance, to find tests that are compatible with ‘sklearn’ models, designed for ‘classification’ tasks, and produce a plot:</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>list_tests(tags<span class="op">=</span>[<span class="st">"model_performance"</span>, <span class="st">"visualization"</span>, <span class="st">"sklearn"</span>], task<span class="op">=</span><span class="st">"classification"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-container column-page-left"><div class="cell-decorator"><pre>In [6]:</pre></div><div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>list_tests(tags<span class="op">=</span>[<span class="st">"model_performance"</span>, <span class="st">"visualization"</span>, <span class="st">"sklearn"</span>], task<span class="op">=</span><span class="st">"classification"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="overfitdiagnosis" class="cell-output cell-output-display" data-execution_count="6">
 <style type="text/css">
 #T_5e2db th {
   text-align: left;
@@ -2943,12 +2957,12 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 </tbody>
 </table>
 </div>
-</div>
+</div></div>
 </section>
-<section id="programmatic-use" class="level1">
+<section id="programmatic-use" class="level1 page-columns page-full">
 <h1>Programmatic Use</h1>
 <p>To work with a specific set of tests programmatically, you can store the results in a variable. For instance, let’s list all tests that are designed for Text Summarization tests and store them in <code>text_summarization_tests</code> for further use.</p>
-<div class="cell" data-execution_count="7">
+<div class="cell-container column-page-left"><div class="cell-decorator"><pre>In [7]:</pre></div><div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>text_summarization_tests <span class="op">=</span> list_tests(task<span class="op">=</span><span class="st">"text_summarization"</span>, pretty<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>text_summarization_tests</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
@@ -2969,18 +2983,18 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
  'validmind.data_validation.nlp.Mentions',
  'validmind.data_validation.nlp.StopWords']</code></pre>
 </div>
-</div>
-<section id="delving-into-test-details-with-describe_test" class="level2">
+</div></div>
+<section id="delving-into-test-details-with-describe_test" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="delving-into-test-details-with-describe_test">Delving into Test Details with <code>describe_test</code></h2>
 <p>After identifying a set of potential tests, you might want to explore the specifics of an individual test. The <code>describe_test</code> function provides a deep dive into the details of a test. It reveals the test name, description, ID, test type, and required inputs. Below, we showcase how to describe a test using its ID:</p>
-<div class="cell" data-execution_count="10">
+<div class="cell-container column-page-left"><div class="cell-decorator"><pre>In [10]:</pre></div><div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>describe_test(<span class="st">"validmind.model_validation.sklearn.OverfitDiagnosis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id":"aec84b1302f548bc8c2a6f89a882c071","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
-</div>
+</div></div>
 </section>
 <section id="conclusion-and-next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion-and-next-steps">Conclusion and Next Steps</h2>
@@ -2989,9 +3003,7 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 
 </section>
 </section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+     </main> <!-- /main -->  <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -3239,8 +3251,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<nav class="page-navigation">
+</script>  <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../notebooks/how_to/explore_test_suites.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Viewing All Available Test Suites and Tests</span>
@@ -3279,8 +3290,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
     </div>
   </div>
-</footer>
-
-
+</footer> 
+  
 
 </body></html>

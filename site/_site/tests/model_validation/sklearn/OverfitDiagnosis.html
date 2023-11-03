@@ -72,6 +72,10 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -138,6 +142,10 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
         <li>
     <a class="dropdown-item" href="../../../guide/testing-overview.html" rel="" target="">
  <span class="dropdown-text"><i class="fa-solid fa-flask-vial" aria-label="flask-vial"></i> Run Tests &amp; Test Suites</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../guide/test-descriptions.html" rel="" target="">
+ <span class="dropdown-text"><i class="fa-solid fa-microscope" aria-label="microscope"></i> Test Descriptions</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header"><i class="fa-solid fa-book" aria-label="book"></i> REFERENCE</li>
@@ -213,7 +221,7 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../guide/testing-overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tests &amp; test suites</span></a>
+ <span class="menu-text">Run tests &amp; test suites</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -268,13 +276,13 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Data Validation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tests/data_validation/ACFandPACFPlot.html" class="sidebar-item-text sidebar-link">
@@ -1216,13 +1224,13 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
  <span class="menu-text">Prompt Validation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tests/prompt_validation/Bias.html" class="sidebar-item-text sidebar-link">
@@ -1281,13 +1289,13 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
  <span class="menu-text">Custom Tests</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../notebooks/code_samples/custom_tests/external_test_providers_demo.html" class="sidebar-item-text sidebar-link">
@@ -1298,13 +1306,13 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
  <span class="menu-text">LLM and NLP</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../notebooks/code_samples/LLM_and_NLP/foundation_models_integration_demo.html" class="sidebar-item-text sidebar-link">
@@ -1345,13 +1353,13 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
  <span class="menu-text">Regression</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../notebooks/code_samples/regression/quickstart_regression_full_suite.html" class="sidebar-item-text sidebar-link">
@@ -1362,13 +1370,13 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
  <span class="menu-text">Time Series</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../notebooks/code_samples/time_series/tutorial_time_series_forecasting.html" class="sidebar-item-text sidebar-link">
@@ -1403,14 +1411,8 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#overfitdiagnosis" id="toc-overfitdiagnosis" class="nav-link active" data-scroll-target="#overfitdiagnosis">OverfitDiagnosis</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/validmind/documentation/edit/main/site/tests/model_validation/sklearn/OverfitDiagnosis.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/validmind/documentation/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
-    </div>
+        
+    <div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="../../../notebooks/how_to/explore_tests.ipynb.html"><i class="bi bi-journal-code"></i>explore_tests.ipynb</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1419,6 +1421,57 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 <section id="overfitdiagnosis" class="level1">
 <h1>OverfitDiagnosis</h1>
 <p>Detects and visualizes overfit regions in an ML model by comparing performance on training and test datasets.</p>
+<div class="quarto-embed-nb-cell">
+<div class="cell" data-execution_count="6">
+<div id="overfitdiagnosis" class="cell-output cell-output-display" data-execution_count="6">
+<style type="text/css">
+#T_5e2db th {
+  text-align: left;
+}
+#T_5e2db_row0_col0, #T_5e2db_row0_col1, #T_5e2db_row0_col2, #T_5e2db_row0_col3, #T_5e2db_row1_col0, #T_5e2db_row1_col1, #T_5e2db_row1_col2, #T_5e2db_row1_col3, #T_5e2db_row2_col0, #T_5e2db_row2_col1, #T_5e2db_row2_col2, #T_5e2db_row2_col3, #T_5e2db_row3_col0, #T_5e2db_row3_col1, #T_5e2db_row3_col2, #T_5e2db_row3_col3 {
+  text-align: left;
+}
+</style>
+
+<table id="T_5e2db" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th id="T_5e2db_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Test Type</th>
+<th id="T_5e2db_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Name</th>
+<th id="T_5e2db_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Description</th>
+<th id="T_5e2db_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">ID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_5e2db_row0_col0" class="data row0 col0">Metric</td>
+<td id="T_5e2db_row0_col1" class="data row0 col1">Confusion Matrix</td>
+<td id="T_5e2db_row0_col2" class="data row0 col2">Evaluates and visually represents the classification ML model's predictive performance using a Confusion Matrix...</td>
+<td id="T_5e2db_row0_col3" class="data row0 col3">validmind.model_validation.sklearn.ConfusionMatrix</td>
+</tr>
+<tr class="even">
+<td id="T_5e2db_row1_col0" class="data row1 col0">Metric</td>
+<td id="T_5e2db_row1_col1" class="data row1 col1">Precision Recall Curve</td>
+<td id="T_5e2db_row1_col2" class="data row1 col2">Evaluates the precision-recall trade-off for binary classification models and visualizes the Precision-Recall curve....</td>
+<td id="T_5e2db_row1_col3" class="data row1 col3">validmind.model_validation.sklearn.PrecisionRecallCurve</td>
+</tr>
+<tr class="odd">
+<td id="T_5e2db_row2_col0" class="data row2 col0">Metric</td>
+<td id="T_5e2db_row2_col1" class="data row2 col1">ROC Curve</td>
+<td id="T_5e2db_row2_col2" class="data row2 col2">Evaluates binary classification model performance by generating and plotting the Receiver Operating Characteristic...</td>
+<td id="T_5e2db_row2_col3" class="data row2 col3">validmind.model_validation.sklearn.ROCCurve</td>
+</tr>
+<tr class="even">
+<td id="T_5e2db_row3_col0" class="data row3 col0">ThresholdTest</td>
+<td id="T_5e2db_row3_col1" class="data row3 col1">Training Test Degradation</td>
+<td id="T_5e2db_row3_col2" class="data row3 col2">Tests if model performance degradation between training and test datasets exceeds a predefined threshold....</td>
+<td id="T_5e2db_row3_col3" class="data row3 col3">validmind.model_validation.sklearn.TrainingTestDegradation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<a class="quarto-notebook-link" id="nblink-1" href="../../../notebooks/how_to/explore_tests.ipynb.html">Source: explore_tests.ipynb</a></div>
 <p><strong>Purpose</strong>: The OverfitDiagnosis test is devised to detect areas within a Machine Learning model that might be prone to overfitting. It achieves this by comparing the model’s performance on both the training and testing datasets. These datasets are broken down into distinct sections defined by a Feature Space. Areas, where the model underperforms by displaying high residual values or a significant amount of overfitting, are highlighted, prompting actions for mitigation using regularization techniques such as L1 or L2 regularization, Dropout, Early Stopping or data augmentation.</p>
 <p><strong>Test Mechanism</strong>: The metric conducts the test by executing the method ‘run’ on the default parameters and metrics with ‘accuracy’ as the specified metric. It segments the feature space by binning crucial feature columns from both the training and testing datasets. Then, the method computes the prediction results for each defined region. Subsequently, the prediction’s efficacy is evaluated, i.e., the model’s performance gap (defined as the discrepancy between the actual and the model’s predictions) for both datasets is calculated and compared with a preset cut-off value for the overfitting condition. A test failure presents an overfit model, whereas a pass signifies a fit model. Meanwhile, the function also prepares figures further illustrating the regions with overfitting.</p>
 <p><strong>Signs of High Risk</strong>: Indicators of a high-risk model are: - A high ‘gap’ value indicating discrepancies in the training and testing data accuracy signals an overfit model. - Multiple or vast overfitting zones within the feature space suggest overcomplication of the model.</p>
@@ -1696,7 +1749,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left"><em>© Copyright 2023 ValidMind Inc All Rights Reserved.</em></div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/validmind/documentation/edit/main/site/tests/model_validation/sklearn/OverfitDiagnosis.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/validmind/documentation/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

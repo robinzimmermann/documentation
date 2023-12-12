@@ -1423,6 +1423,16 @@ gtag('config', 'G-S46CKWPNSS', { 'anonymize_ip': true});
 <section id="overfitdiagnosis" class="level1">
 <h1>OverfitDiagnosis</h1>
 <p>Detects and visualizes overfit regions in an ML model by comparing performance on training and test datasets.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Use case</strong>: <code>classification</code>, <code>text_classification</code><br> <strong>Supports</strong>: <code>sklearn</code>, <code>binary_classification</code>, <code>multiclass_classification</code>, <code>model_diagnosis</code></p>
+</div>
+</div>
+</div>
 <p><strong>Purpose</strong>: The OverfitDiagnosis test is devised to detect areas within a Machine Learning model that might be prone to overfitting. It achieves this by comparing the model’s performance on both the training and testing datasets. These datasets are broken down into distinct sections defined by a Feature Space. Areas, where the model underperforms by displaying high residual values or a significant amount of overfitting, are highlighted, prompting actions for mitigation using regularization techniques such as L1 or L2 regularization, Dropout, Early Stopping or data augmentation.</p>
 <p><strong>Test Mechanism</strong>: The metric conducts the test by executing the method ‘run’ on the default parameters and metrics with ‘accuracy’ as the specified metric. It segments the feature space by binning crucial feature columns from both the training and testing datasets. Then, the method computes the prediction results for each defined region. Subsequently, the prediction’s efficacy is evaluated, i.e., the model’s performance gap (defined as the discrepancy between the actual and the model’s predictions) for both datasets is calculated and compared with a preset cut-off value for the overfitting condition. A test failure presents an overfit model, whereas a pass signifies a fit model. Meanwhile, the function also prepares figures further illustrating the regions with overfitting.</p>
 <p><strong>Signs of High Risk</strong>: Indicators of a high-risk model are: - A high ‘gap’ value indicating discrepancies in the training and testing data accuracy signals an overfit model. - Multiple or vast overfitting zones within the feature space suggest overcomplication of the model.</p>

@@ -172,20 +172,6 @@
     ]
   },
   {
-    "listing": "/guide/samples-jupyter-notebooks.html",
-    "items": [
-      "/notebooks/code_samples/regression/regression_model_full_suite_demo.html",
-      "/notebooks/code_samples/LLM_and_NLP/nlp_sentiment_analysis_catboost_demo.html",
-      "/notebooks/code_samples/LLM_and_NLP/prompt_validation_demo.html",
-      "/notebooks/code_samples/regression/quickstart_regression_full_suite.html",
-      "/notebooks/code_samples/LLM_and_NLP/hugging_face_integration_demo.html",
-      "/notebooks/code_samples/LLM_and_NLP/foundation_models_integration_demo.html",
-      "/notebooks/code_samples/LLM_and_NLP/hugging_face_summarization_demo.html",
-      "/notebooks/code_samples/LLM_and_NLP/foundation_models_summarization_demo.html",
-      "/notebooks/code_samples/time_series/tutorial_time_series_forecasting.html"
-    ]
-  },
-  {
     "listing": "/guide/guides.html",
     "items": [
       "/guide/set-up-your-organization.html",
@@ -205,6 +191,34 @@
       "/guide/customize-validation-report-templates.html",
       "/guide/preparing-validation-reports.html",
       "/guide/view-reporting.html"
+    ]
+  },
+  {
+    "listing": "/guide/samples-jupyter-notebooks.html",
+    "items": [
+      "/notebooks/code_samples/regression/regression_model_full_suite_demo.html",
+      "/notebooks/code_samples/LLM_and_NLP/nlp_sentiment_analysis_catboost_demo.html",
+      "/notebooks/code_samples/LLM_and_NLP/prompt_validation_demo.html",
+      "/notebooks/code_samples/regression/quickstart_regression_full_suite.html",
+      "/notebooks/code_samples/LLM_and_NLP/hugging_face_integration_demo.html",
+      "/notebooks/code_samples/LLM_and_NLP/foundation_models_integration_demo.html",
+      "/notebooks/code_samples/LLM_and_NLP/hugging_face_summarization_demo.html",
+      "/notebooks/code_samples/LLM_and_NLP/foundation_models_summarization_demo.html",
+      "/notebooks/code_samples/time_series/tutorial_time_series_forecasting.html"
+    ]
+  },
+  {
+    "listing": "/guide/get-started-developer-framework.html",
+    "items": [
+      "/guide/developer-modeling-environment-1.html",
+      "/guide/developer-modeling-environment-2.html",
+      "/guide/developer-modeling-environment-3.html",
+      "/guide/developer-with-framework-1.html",
+      "/guide/developer-with-framework-2.html",
+      "/guide/developer-with-framework-3.html",
+      "/guide/developer-with-platform-ui-1.html",
+      "/guide/developer-with-platform-ui-2.html",
+      "/guide/developer-with-platform-ui-3.html"
     ]
   }
 ]
